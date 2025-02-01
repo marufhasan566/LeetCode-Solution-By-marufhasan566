@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/symmetric-tree/?envType=study-plan-v2&envId=top-interview-150
-
+// I don't know how this problem got accepted. I definitely need to revise this one
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -12,6 +12,7 @@
  * right(right) {}
  * };
  */
+
 vector<int> l;
 vector<int> r;
 void levelOrderFromLeft(TreeNode *root)
