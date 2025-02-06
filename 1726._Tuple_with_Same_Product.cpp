@@ -9,7 +9,7 @@ class Solution
 public:
     int tupleSameProduct(vector<int> &nums)
     {
-        unordered_map<int, int> freq;
+        unordered_map<int, int> freq; // key->product of two and value->frequency of such pair
         int n = nums.size();
         for (int i = 0; i < n - 1; i++)
             for (int j = i + 1; j < n; j++)
