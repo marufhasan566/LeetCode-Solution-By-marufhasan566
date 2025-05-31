@@ -17,6 +17,9 @@
         "utility": "cpp",
         "valarray": "cpp",
         "chrono": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "cstdlib": "cpp"
     }
 }
