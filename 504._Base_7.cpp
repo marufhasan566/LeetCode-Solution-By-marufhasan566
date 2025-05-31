@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/base-7/description/?envType=problem-list-v2&envId=math
+// https://www.youtube.com/watch?v=eeKuhz1_Jr0&ab_channel=L3O
 
 class Solution
 {
