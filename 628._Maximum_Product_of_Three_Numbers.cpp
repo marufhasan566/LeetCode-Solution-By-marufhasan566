@@ -1,0 +1,14 @@
+// https://leetcode.com/problems/maximum-product-of-three-numbers/description/?envType=problem-list-v2&envId=array
+// https://www.youtube.com/watch?v=9A4Bebss1WQ&ab_channel=codeExplainer
+
+class Solution
+{
+public:
+    int maximumProduct(vector<int> &nums)
+    {
+        sort(nums.begin(), nums.end());
+        int n = nums.size();
+        return max(nums[n - 1] * nums[n - 2] * nums[n - 3],
+                   nums[0] * nums[1] * nums[n - 1]);
+    }
+};
