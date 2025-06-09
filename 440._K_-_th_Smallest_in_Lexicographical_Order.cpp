@@ -4,31 +4,43 @@
 class Solution
 {
 public:
-    void solve(int curr, int n, vector<int> &result)
+    int Count(long curr, long next, int n)
     {
-        if (curr > n)
-            return;
+        int countNum = 0;
 
-        result.push_back(curr);
-
-        for (int nextDigit = 0; nextDigit <= 9; nextDigit++)
+        while (curr <= n)
         {
-            int nextnum = curr * 10 + nextDigit;
+            countNum += (next - curr);
 
-            if (nextnum > n)
-                return;
+            curr *= 10;
+            next *= 10;
 
-            solve(nextnum, n, result);
+            next = min(next, long(n + 1));
         }
+
+        return countNum;
     }
 
     int findKthNumber(int n, int k)
     {
-        vector<int> result;
+        int curr = 1;
+        k -= 1; // Since we start from the first number (1), we need k-1 more numbers
 
-        for (int num = 1; num <= 9; num++)
-            solve(num, n, result);
+        while (k > 0)
+        {
+            int count = Count(curr, curr + 1, n);
+            if (count <= k)
+            {
+                curr++;
+                k -= count; // skipping the elements under curr prefix tree
+            }
+            else
+            {
+                curr *= 10;
+                k -= 1;
+            }
+        }
 
-        return result[k - 1];
+        return curr;
     }
 };
