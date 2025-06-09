@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/k-th-smallest-in-lexicographical-order/description/?envType=daily-question&envId=2025-06-09
+// https://www.youtube.com/watch?v=pQ_BQ9J9p-c&ab_channel=codestorywithMIK
 
 class Solution
 {
