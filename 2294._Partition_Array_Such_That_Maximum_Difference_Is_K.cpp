@@ -5,7 +5,7 @@ class Solution
 {
 public:
     int partitionArray(vector<int> &nums, int k)
-    {2099. Find Subsequence of Length K With the Largest Sum
+    {
         sort(nums.begin(), nums.end());
         int n = nums.size();
 
