@@ -1,0 +1,37 @@
+// https://leetcode.com/problems/fruit-into-baskets/description/?envType=daily-question&envId=2025-08-04
+// https://www.youtube.com/watch?v=QBi5_btsse4&ab_channel=codestorywithMIK
+
+class Solution
+{
+public:
+    int totalFruit(vector<int> &fruits)
+    {
+        int n = fruits.size();
+
+        unordered_map<int, int> mp;
+
+        int i = 0;
+        int j = 0;
+        int count = 0;
+
+        while (j < n)
+        {
+            mp[fruits[j]]++;
+
+            if (mp.size() <= 2)
+            {
+                count = max(count, j - i + 1);
+            }
+            else
+            {
+                mp[fruits[i]]--;
+                if (mp[fruits[i]] == 0)
+                    mp.erase(fruits[i]);
+                i++;
+            }
+
+            j++;
+        }
+        return count;
+    }
+};
